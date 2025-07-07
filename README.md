@@ -118,7 +118,7 @@ terraform apply -auto-approve
 - Peak VUs: 600
 - Response Time (p95): ~380ms
 - Autoscaled to 5 instances
-- Pass rate: 98.98% success
+- Pass rate: 99.98% success
 
 ---
 

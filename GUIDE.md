@@ -121,11 +121,13 @@ terraform plan
 terraform apply -auto-approve
 ```
 
-![terraform-apply](Screenshots/terraform-apply.jpg)
+> Extract the Load Balancer's IP:
+  
+  ![terraform-apply](Screenshots/terraform-apply.jpg)
 
 ---
 
-## 🖼️ Terraform Outputs
+## 🖼️ Load Balancer Summary
 
 - **VM Instance (Zone A):**
     ![brazil1](Screenshots/brazil1.jpg)
@@ -147,7 +149,7 @@ This provisions:
 
 ## 📊 Grafana Dashboard Setup
 
-### VM Deployment _(if not deployed in Terraform)_
+### VM Instance Deployment _(if not deployed in Terraform)_
 
 ```bash
 gcloud compute instances create grafana-vm \
@@ -158,7 +160,7 @@ gcloud compute instances create grafana-vm \
   --tags=grafana,http-server
 ```
 
-### Install Grafana _(if not included in `grafana-vm` Instance)_
+### Install Grafana _(if not included in `grafana-vm` instance)_
 
 ```bash
 sudo apt update
@@ -173,18 +175,18 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-### Grafana Initial Login Information
+### Grafana Login Information
 
 ```yaml
 Credentials:
 Grafana URL: http://<EXTERNAL IP>:3000
 
 Username: admin
-Password: admin # Password change required after login)
+Password: admin           # Password change required after login)
 ```
 
 ---
-
+**
 ## 📸 Grafana Dashboard
 
 - **Grafana Login Screen:**

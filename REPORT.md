@@ -92,7 +92,7 @@
 
 - **Test Duration**: ~`12 minutes` (combined)
 - **Max VUs**: 600
-- **Successful Requests**: `98.98%` (combined)
+- **Successful Requests**: `99.98%` (combined)
 - **Failed Requests**: `4305` of 334398 (combined)
 - **p(95) Response Time**: ~380ms
 - **Peak CPU**: ~72%
@@ -102,9 +102,7 @@
 
 ### 🔧  Commands Recap (GCP)
 
-These commands were executed post-deployment to extend the infrastructure provisioned by Terraform. Alternatively, you can integrate a `Linux/Debian VM Instance` (with SSH access enabled) and a corresponding `Firewall Rule` to allow HTTP traffic for Grafana directly into the `bam6-vpc` as part of your Terraform configuration, enabling automated provisioning of the monitoring stack during initial deployment.
-
-> **NOTE:** These steps were initially performed manually before I realized they could be integrated directly into the Terraform deployment. The infrastructure code has since been updated to reflect this improvement.
+> These commands below were executed post-deployment to extend the infrastructure provisioned by Terraform. Alternatively, you can integrate a `Linux/Debian VM Instance` (with SSH access enabled) and a corresponding `Firewall Rule` to allow HTTP traffic for Grafana directly into the `bam6-vpc` as part of your Terraform configuration, enabling automated provisioning of the monitoring stack during initial deployment.
 
 - **VM Instance:**
 
@@ -120,7 +118,7 @@ These commands were executed post-deployment to extend the infrastructure provis
   ![gcloud-compute-instances-grafana-vm](/Screenshots/gcloud-compute-instances-grafana-vm.jpg)
   ![vm-instances](/Screenshots/vm-instances.jpg)
 
-- **Grafana Firewall Rule:**
+- **Grafana Firewall Rule:** I assigned it to `default` in the screenshot, but the command has been updated.
 
   ```bash
   gcloud compute firewall-rules create allow-grafana-http \
