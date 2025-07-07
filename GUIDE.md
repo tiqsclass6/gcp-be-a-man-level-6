@@ -186,7 +186,7 @@ Password: admin           # Password change required after login)
 ```
 
 ---
-**
+
 ## 📸 Grafana Dashboard
 
 - **Grafana Login Screen:**
